@@ -24,7 +24,10 @@
     # Supported systems for your flake packages, shell, etc.
     systems = [
       "aarch64-linux"
+      "i686-linux"
       "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
     ];
     # This is a function that generates an attribute by calling a function you
     # pass to it, with each system as an argument
@@ -49,11 +52,11 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      devbox = nixpkgs.lib.nixosSystem {
+      nixstation = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main nixos configuration file <
-          ./hosts/devbox/configuration.nix
+          ./hosts/nixstation/configuration.nix
         ];
       };
     };
@@ -61,7 +64,7 @@
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      "stewart@devbox" = home-manager.lib.homeManagerConfiguration {
+      "stewart@nixstation" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [

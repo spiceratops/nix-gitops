@@ -22,7 +22,7 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-    <nixos-wsl/modules>
+    #<nixos-wsl/modules>
   ];
 
   nixpkgs = {
@@ -69,13 +69,13 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
-  networking.hostName = "devbox";
+  networking.hostName = "nixstation";
 
   users.users = {
     stewart = {
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
-        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcbIqtYV7xyO1+sP1sCx+/Z6HYTsh+1gYG+5VF1pCW3
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcbIqtYV7xyO1+sP1sCx+/Z6HYTsh+1gYG+5VF1pCW3"
       ];
       extraGroups = ["wheel"];
     };
