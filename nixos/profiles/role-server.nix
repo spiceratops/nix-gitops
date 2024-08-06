@@ -11,8 +11,8 @@ with lib;
 
 
     # Enable monitoring for remote scraiping
-    mySystem.services.monitoring.enable = true;
-    mySystem.services.rebootRequiredCheck.enable = true;
+    # mySystem.services.monitoring.enable = true;
+    # mySystem.services.rebootRequiredCheck.enable = true;
     mySystem.security.wheelNeedsSudoPassword = false;
     # mySystem.services.cockpit.enable = true;
     # mySystem.system.motd.enable = true;
