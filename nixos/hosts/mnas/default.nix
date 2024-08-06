@@ -16,7 +16,7 @@
     mySystem.system.autoUpgrade.enable = true; # bold move cotton
     mySystem.services = {
       openssh.enable = true;
-      minio.enable = true;
+      # minio.enable = true;
       # syncthing = {
       #   enable = true;
       #   syncPath = "/tank/syncthing/";
@@ -33,7 +33,7 @@
     };
 
     mySystem.services.nfs.enable = true;
-    mySystem.system.motd.networkInterfaces = [ "eno2" ];
+    # mySystem.system.motd.networkInterfaces = [ "eno2" ];
 
 
 
