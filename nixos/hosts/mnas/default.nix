@@ -29,7 +29,7 @@
 
     mySystem.system = {
       zfs.enable = true;
-      zfs.mountPoolsAtBoot = [ "zfs" ];
+      zfs.mountPoolsAtBoot = [ "rpool" ];
     };
 
     mySystem.services.nfs.enable = true;
