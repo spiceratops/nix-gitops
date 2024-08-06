@@ -14,15 +14,15 @@ with lib;
     mySystem.services.monitoring.enable = true;
     mySystem.services.rebootRequiredCheck.enable = true;
     mySystem.security.wheelNeedsSudoPassword = false;
-    mySystem.services.cockpit.enable = true;
-    mySystem.system.motd.enable = true;
-    mySystem.services.gatus.monitors = [{
-      name = config.networking.hostName;
-      group = "servers";
-      url = "icmp://${config.networking.hostName}.${config.mySystem.internalDomain}";
-      interval = "1m";
-      conditions = [ "[CONNECTED] == true" ];
-    }];
+    # mySystem.services.cockpit.enable = true;
+    # mySystem.system.motd.enable = true;
+    # mySystem.services.gatus.monitors = [{
+    #   name = config.networking.hostName;
+    #   group = "servers";
+    #   url = "icmp://${config.networking.hostName}.${config.mySystem.internalDomain}";
+    #   interval = "1m";
+    #   conditions = [ "[CONNECTED] == true" ];
+    # }];
 
     nix.settings = {
       # TODO factor out into mySystem
