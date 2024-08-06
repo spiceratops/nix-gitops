@@ -13,7 +13,7 @@ with lib;
     # Enable monitoring for remote scraiping
     # mySystem.services.monitoring.enable = true;
     # mySystem.services.rebootRequiredCheck.enable = true;
-    mySystem.security.wheelNeedsSudoPassword = false;
+    # mySystem.security.wheelNeedsSudoPassword = false;
     # mySystem.services.cockpit.enable = true;
     # mySystem.system.motd.enable = true;
     # mySystem.services.gatus.monitors = [{
@@ -31,8 +31,8 @@ with lib;
       min-free = lib.mkDefault (128 * 1000 * 1000);
     };
 
-    services.logrotate.enable = mkDefault true;
-    services.smartd.enable = mkDefault true;
+    # services.logrotate.enable = mkDefault true;
+    # services.smartd.enable = mkDefault true;
 
     programs.command-not-found.enable = mkDefault false;
 
