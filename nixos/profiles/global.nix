@@ -23,7 +23,7 @@ with lib;
 
       # basics for all devices
       time.timeZone = "Australia/Melbourne";
-      security.increaseWheelLoginLimits = true;
+      # security.increaseWheelLoginLimits = true;
       system.packages = [ pkgs.bat ];
       domain = "spiceratops.cloud";
       internalDomain = "spiceratops.dev";
