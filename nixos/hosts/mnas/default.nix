@@ -40,7 +40,7 @@
 
     boot = {
 
-      initrd.availableKernelModules = [ "xhci_pci" "ahci" "mpt3sas" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+      initrd.availableKernelModules = [ "uhci_hcd" "ehci_pci" "ahci" "mpt3sas" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod" ];
       initrd.kernelModules = [ ];
       kernelModules = [ "kvm-intel" ];
       extraModulePackages = [ ];
@@ -71,6 +71,7 @@
       {
         device = "/dev/disk/by-label/EFI";
         fsType = "vfat";
+        options = [ "fmask=0077" "dmask=0077" ];
       };
 
     fileSystems."/nix" =
@@ -85,6 +86,8 @@
         fsType = "zfs";
         neededForBoot = true; # for impermanence
       };
+
+  swapDevices = [ ];
 
     # TODO
     # fileSystems."/mnt/cache" =
