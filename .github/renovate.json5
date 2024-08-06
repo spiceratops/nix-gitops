@@ -1,0 +1,32 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "github>spiceratops/renovate-config",
+      "github>spiceratops/renovate-config:automerge-github-actions",
+      "github>spiceratops/nix-gitops//.github/renovate/autoMerge.json5",
+    ],
+    "gitAuthor": "${{ secrets.BOT_USERNAME }} <${{ secrets.BOT_USER_ID }}+${{ secrets.BOT_USERNAME }}[bot]@users.noreply.github.com>",
+    "ignoreTests": "true",
+
+    // TODO remove once out of beta?
+    // https://docs.renovatebot.com/modules/manager/nix/
+    "nix": {
+        "enabled": "true",
+    },
+
+    "lockFileMaintenance": {
+        "enabled": "true",
+        "automerge": "true",
+        "schedule": [ "before 4am on Sunday" ],
+    },
+
+    "regexManagers": [
+    {
+      fileMatch: ["(^|/)nixos/.*\\.nix$"],
+      matchStrings: [
+        'image *= *"(?<depName>.*?):(?<currentValue>.*?)(@(?<currentDigest>sha256:[a-f0-9]+))?"',
+      ],
+      datasourceTemplate: "docker",
+    }
+  ],
+}

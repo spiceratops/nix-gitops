@@ -1,25 +1,5 @@
 creation_rules:
-    - path_regex: ENC[AES256_GCM,data:4UWcvR4WA4zjeA==,iv:1f8VfdbRV1cBt1lIbVU3OUSTEykGeGIHVlT2nvwdYGc=,tag:BmouRQkH6F1u1dWqP3HS7g==,type:str]
+    - path_regex: .*\.sops\.yaml$
       key_groups:
         - age:
-            - ENC[AES256_GCM,data:g1viWMEqgLI9e+En7m+anFttJiG/wg4UJ81dxL/SxYp78ar2WzVx+c+ba2DhLX2LLNg4HBO0XguPOgECrSk=,iv:q5UrfmbfYXh1gj0ZQH9526XVcCMIzW6jWBFibAY8BmU=,tag:jM5LgZkgZSv8+hm9azIbFw==,type:str]
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age153gpfdw58csvgxj3vn9ym2g3zx7mfhaldyz5uvvrfajne8htj3asjqrp7h
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBFdmpzT2Z2V2tiejBHMUVz
-            Q203eWVwOHZOczVUem9lc1dCT3ZSTkVFTUdNCmV2S2lVN3RNZGtTZEl4c2J3T3dD
-            QXhwempEQk15a1VQdUVOdDNqVzNYYlUKLS0tIGJsMXhGQ2dwL3ZtdTFIRmIvRFF2
-            c1QyajJoMVZBcXhaSXpHNHFZRS90SnMKbuTaD/DeA7ocv5UC6CTwcjwwVKVZax5P
-            AnacA8WeTDMNk2ymbXdLLq//9YsBRgDSQTboNJ3P+oVG0Vd+fsSeOQ==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-07-12T05:10:54Z"
-    mac: ENC[AES256_GCM,data:JzRjDNcI3h2XehHmkp9kiscf7ET2eHv5tHxEbfPpJYVPBUXD+yiigNQDJTWUq0C01NxA68cwJRqve+uVXBnthB2XQcVEWfGaso3LKMYEmjXTx4pTgI46YkJAdhKL9u+BmwIHJlX2dJN2eYyGvvQKzYVjgtr16oa1V5jWxpeFtUg=,iv:O0FTUr1lzNq4RN7B4CME87NYTdgXV0xgXtrp5CiUtOk=,tag:9jarvnBO4QVqtpLXe5Q0rA==,type:str]
-    pgp: []
-    unencrypted_suffix: _unencrypted
-    version: 3.8.0
+            - age153gpfdw58csvgxj3vn9ym2g3zx7mfhaldyz5uvvrfajne8htj3asjqrp7h

@@ -5,8 +5,6 @@ Thumbs.db
 .private/
 # archive
 .archive/
-# ansible
-xanmanning.k3s*
 # terraform
 .terraform
 *.tfvars
@@ -18,4 +16,10 @@ xanmanning.k3s*
 *.pem
 # envrc
 .envrc
-.nix
+.nix*
+.mozilla
+**/*.tmp.sops.yaml
+result
+.direnv
+**/*.sops.tmp.yaml
+.kube
