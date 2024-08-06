@@ -22,7 +22,7 @@
       #   syncPath = "/tank/syncthing/";
       # };
     };
-    mySystem.security.acme.enable = true;
+    # mySystem.security.acme.enable = true;
 
     mySystem.nasFolder = "/tank";
     mySystem.system.resticBackup.local.location = "/tank/backup/nixos/nixos";
