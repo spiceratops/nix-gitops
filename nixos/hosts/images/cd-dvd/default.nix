@@ -67,13 +67,13 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.truxnell = {
+  users.users.spiceratops = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
     ];
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZS9J1ydflZ4iJdJgO8+vnN8nNSlEwyn9tbWU9OcysW truxnell@home"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcbIqtYV7xyO1+sP1sCx+/Z6HYTsh+1gYG+5VF1pCW3"
     ];
   };
 
@@ -84,6 +84,6 @@
   '';
   nixpkgs.hostPlatform = "aarch64-linux";
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 
 }

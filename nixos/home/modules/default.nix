@@ -12,12 +12,12 @@
   options.myHome.username = lib.mkOption {
     type = lib.types.str;
     description = "users username";
-    default = "truxnell";
+    default = "spiceratops";
   };
   options.myHome.homeDirectory = lib.mkOption {
     type = lib.types.str;
     description = "users homedir";
-    default = "truxnell";
+    default = "spiceratops";
   };
 
   # Home-manager defaults
