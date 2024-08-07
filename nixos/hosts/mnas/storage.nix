@@ -19,7 +19,7 @@ let
     {
       type = "parity";
       name = "parity0";
-      uuid = "d5340ce6-9200-42bf-9389-33a0904b1659";
+      uuid = "c066a6f6-ce3e-4c0b-8cff-0f7ddec867ab";
     }
     {
       type = "data";
