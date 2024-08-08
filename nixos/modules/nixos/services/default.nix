@@ -4,7 +4,7 @@
     ./reboot-required-check.nix
     ./nfs
     # ./nix-serve
-    # ./restic
+    ./restic
     # ./minio
   ];
 }

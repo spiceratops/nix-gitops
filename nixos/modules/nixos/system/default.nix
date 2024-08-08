@@ -10,6 +10,6 @@
     ./nfs
     # ./motd
     # ./pushover
-    # ./autoupgrades
+    ./autoupgrades
   ];
 }
