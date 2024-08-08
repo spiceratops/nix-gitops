@@ -48,14 +48,14 @@ in
     sops.secrets = mkIf (cfg.local.enable || cfg.remote.enable) {
       "services/restic/password" = {
         sopsFile = ./secrets.sops.yaml;
-        owner = 568;
-        group = 568;
+        owner = "kah";
+        group = "kah";
       };
 
       "services/restic/env" = {
         sopsFile = ./secrets.sops.yaml;
-        owner = 568;
-        group = 568;
+        owner = "kah";
+        group = "kah"";
       };
     };
 
