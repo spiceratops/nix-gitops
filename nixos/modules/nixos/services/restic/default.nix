@@ -55,7 +55,7 @@ in
       "services/restic/env" = {
         sopsFile = ./secrets.sops.yaml;
         owner = "kah";
-        group = "kah"";
+        group = "kah";
       };
     };
 
