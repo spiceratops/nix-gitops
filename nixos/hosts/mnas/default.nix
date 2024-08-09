@@ -13,7 +13,7 @@
   config = {
     mySystem.purpose = "Network Attached Storage";
     mySystem.system.impermanence.enable = true;
-    # mySystem.system.autoUpgrade.enable = true; # bold move cotton
+    mySystem.system.autoUpgrade.enable = true; # bold move cotton
     mySystem.services = {
       openssh.enable = true;
       # minio.enable = true;
@@ -25,7 +25,7 @@
     # mySystem.security.acme.enable = true;
 
     mySystem.nasFolder = "/tank";
-    # mySystem.system.resticBackup.local.location = "/tank/backup/nixos/nixos";
+    mySystem.system.resticBackup.local.location = "/tank/backup/nixos/nixos";
 
     mySystem.system = {
       zfs.enable = true;

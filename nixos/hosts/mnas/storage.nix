@@ -163,7 +163,7 @@ in
   # nfs
   services.nfs.server.enable = true;
   services.nfs.server.exports = ''
-    /tank 192.168.10.1/24(no_subtree_check,all_squash,anonuid=568,anongid=568,rw,fsid=0) 10.8.20.1/24(no_subtree_check,all_squash,anonuid=568,anongid=568,rw,fsid=0)
+    /tank 192.168.10.1/24(no_subtree_check,all_squash,anonuid=568,anongid=568,rw,fsid=0) 192.168.1.1/24(no_subtree_check,all_squash,anonuid=568,anongid=568,rw,fsid=0)
   '';
   # disable v2/v3 nfs to force v4
   services.nfs.settings.nfsd = {
