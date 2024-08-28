@@ -124,6 +124,10 @@
           path = "/tank/games";
           "read only" = "no";
         };
+        ai = {
+          path = "/tank/ai";
+          "read only" = "no";
+        };
       };
 
     };
