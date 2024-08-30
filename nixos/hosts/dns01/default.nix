@@ -14,7 +14,6 @@
   mySystem.services = {
 
     openssh.enable = true;
-    cfDdns.enable = true;
     powerdns = {
       enable = true;
       admin-ui = false;
