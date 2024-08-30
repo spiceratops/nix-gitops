@@ -19,7 +19,7 @@
       enable = true;
       admin-ui = false;
     };
-    adguardhome.enable = true;
+    # adguardhome.enable = true;
   };
 
     mySystem.system = {
