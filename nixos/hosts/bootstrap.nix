@@ -18,11 +18,10 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
     ];
-    # TODO
-    # openssh.authorizedKeys.keys = [
-    #   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZS9J1ydflZ4iJdJgO8+vnN8nNSlEwyn9tbWU9OcysW truxnell@home"
-    # ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcbIqtYV7xyO1+sP1sCx+/Z6HYTsh+1gYG+5VF1pCW3 Spiceratops"
+    ];
   };
-  #TODO networking.hostId = "0a90730f";
+  networking.hostId = "3de58d94814393ed16548678c8aae1bc";
   system.stateVersion = "24.05";
 }

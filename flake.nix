@@ -150,6 +150,19 @@
             ];
           };
 
+          "dns01" = mkNixosConfig {
+            # DNS 01
+
+            hostname = "dns01";
+            system = "x86_64-linux";
+            hardwareModules = [
+              ./nixos/profiles/hw-generic-x86.nix
+            ];
+            profileModules = [
+              ./nixos/profiles/role-server.nix
+              { home-manager.users.spiceratops = ./nixos/home/spiceratops/server.nix; }
+            ];
+          };
 
         };
 
