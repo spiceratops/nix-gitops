@@ -6,6 +6,6 @@
     # ./nix-serve
     ./restic
     # ./minio
-    ./powerdns
+    # ./powerdns
   ];
 }
