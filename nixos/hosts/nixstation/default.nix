@@ -9,12 +9,8 @@
   mySystem.purpose = "Development";
   mySystem.services = {
     openssh.enable = true;
-    podman.enable = true;
     nginx.enable = true;
     code-server.enable = true;
-    postgresql =
-      { enable = true; backup = false; };
-
   };
 
 
@@ -22,6 +18,7 @@
   mySystem.persistentFolder = "/persistent";
   mySystem.system.motd.networkInterfaces = [ "eno1" ];
   mySystem.security.acme.enable = true;
+
 
   # Dev machine
   mySystem.system.resticBackup =

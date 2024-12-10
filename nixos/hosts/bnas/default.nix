@@ -11,16 +11,12 @@
 
   ];
   config = {
-    mySystem.purpose = "Network Attached Storage";
+    mySystem.purpose = "Network Attached Storage for Backups";
     mySystem.system.impermanence.enable = true;
     mySystem.system.autoUpgrade.enable = true; # bold move cotton
     mySystem.services = {
       openssh.enable = true;
       # minio.enable = true;
-      # syncthing = {
-      #   enable = true;
-      #   syncPath = "/tank/syncthing/";
-      # };
     };
     # mySystem.security.acme.enable = true;
 
@@ -58,7 +54,7 @@
     };
 
     networking.hostName = "mnas"; # Define your hostname.
-    networking.hostId = "8425e349"; # for zfs, helps stop importing to wrong machine
+    #TODO networking.hostId = "8425e349"; # for zfs, helps stop importing to wrong machine
     networking.useDHCP = lib.mkDefault true;
 
     fileSystems."/" =
@@ -104,8 +100,8 @@
       openFirewall = true;
       extraConfig = ''
         workgroup = WORKGROUP
-        server string = mnas
-        netbios name = mnas
+        server string = bnas
+        netbios name = bnas
         security = user
         #use sendfile = yes
         #max protocol = smb2
@@ -116,27 +112,11 @@
         map to guest = bad user
       '';
       shares = {
-        media = {
-          path = "/tank/media";
-          "read only" = "no";
-        };
-        games = {
-          path = "/tank/games";
-          "read only" = "no";
-        };
-        ai = {
-          path = "/tank/ai";
-          "read only" = "no";
-        };
         backup = {
           path = "/tank/backup";
           "read only" = "no";
         };
-        photos = {
-          path = "/tank/photos";
-          "read only" = "no";
-        };
-        photos = {
+        nvr = {
           path = "/tank/nvr";
           "read only" = "no";
         };
