@@ -136,7 +136,7 @@
           path = "/tank/photos";
           "read only" = "no";
         };
-        photos = {
+        nvr = {
           path = "/tank/nvr";
           "read only" = "no";
         };
