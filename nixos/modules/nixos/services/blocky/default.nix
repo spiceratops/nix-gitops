@@ -37,7 +37,7 @@ in
           # definition of whitelist groups. Attention: if the same group has black and whitelists, whitelists will be used to disable particular blacklist entries. If a group has only whitelist entries -> this means only domains from this list are allowed, all other domains will be blocked
           whiteLists = {
             ads = [
-              "https://raw.githubusercontent.com/spiceratops/nix-gitops/main/nixos/modules/services/blocky/whitelist.txt"
+              "https://raw.githubusercontent.com/spiceratops/nix-gitops/main/nixos/modules/nixos/services/blocky/whitelist.txt"
             ];
           };
           # definition: which groups should be applied for which client
