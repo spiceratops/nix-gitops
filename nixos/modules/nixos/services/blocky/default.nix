@@ -152,7 +152,7 @@ in
             "in-addr.arpa" = "192.168.1.1"; # reverse dns lookup to Opnsense
             "ip6.arpa" = "192.168.1.1"; # reverse dns lookup to Opnsense
 
-            "." = "192.168.1.1"
+            "." = "192.168.1.1";
           };
         };
         # optional: drop all queries with following query types. Default: empty
