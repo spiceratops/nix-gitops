@@ -140,7 +140,7 @@ in
           # mapping = [ ];
         };
         conditional = {
-          fallbackUpstream = true;
+          fallbackUpstream = false;
           rewrite = {
             "reddit.com" = "reddit.strallow.cloud";
           };
