@@ -38,8 +38,8 @@ in
           whiteLists = {
             ads = [
               "https://raw.githubusercontent.com/spiceratops/nix-gitops/main/nixos/modules/services/blocky/whitelist.txt"
-
             ];
+          };
           # definition: which groups should be applied for which client
           clientGroupsBlock = {
             # default will be used, if no special definition for a client name exists
