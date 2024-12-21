@@ -145,7 +145,7 @@ in
             "reddit.com" = "reddit.strallow.cloud";
           };
           mapping = {
-            "spiceratops.cloud" = "192.168.1.53";
+            # "spiceratops.cloud" = "192.168.1.53";
             "strallow.cloud" = "192.168.15.253";
 
             # reverse dns setup
