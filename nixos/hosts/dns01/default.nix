@@ -14,11 +14,11 @@
   mySystem.services = {
 
     openssh.enable = true;
-    powerdns = {
-      enable = true;
-      admin-ui = false;
-    };
-    # adguardhome.enable = true;
+    # powerdns = {
+    #   enable = true;
+    #   admin-ui = false;
+    # };
+    blocky.enable = true;
   };
 
     mySystem.system = {
