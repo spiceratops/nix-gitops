@@ -7,5 +7,6 @@
     ./restic
     # ./minio
     # ./powerdns
+    ./blocky
   ];
 }
