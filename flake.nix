@@ -38,6 +38,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    comin = {
+      url = "github:nlewo/comin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # nix-index database
     # https://github.com/nix-community/nix-index-database
     nix-index-database = {
@@ -55,6 +60,7 @@
     , home-manager
     , nix-vscode-extensions
     , impermanence
+    , comin
     , ...
     } @ inputs:
 
