@@ -150,10 +150,10 @@
             ];
           };
 
-          "dns01" = mkNixosConfig {
-            # DNS 01
+          "dns02" = mkNixosConfig {
+            # DNS 02
 
-            hostname = "dns01";
+            hostname = "dns02";
             system = "x86_64-linux";
             hardwareModules = [
               ./nixos/profiles/hw-generic-x86.nix

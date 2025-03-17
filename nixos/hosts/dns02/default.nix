@@ -14,11 +14,7 @@
   mySystem.services = {
 
     openssh.enable = true;
-    # powerdns = {
-    #   enable = true;
-    #   admin-ui = false;
-    # };
-    blocky.enable = true;
+    adguardhome.enable = true;
   };
 
     mySystem.system = {
@@ -57,7 +53,7 @@
       };
     };
 
-    networking.hostName = "dns01"; # Define your hostname.
+    networking.hostName = "dns02"; # Define your hostname.
     networking.hostId = "e3657900"; # for zfs, helps stop importing to wrong machine
     networking.useDHCP = lib.mkDefault true;
 

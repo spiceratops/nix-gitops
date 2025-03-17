@@ -53,7 +53,7 @@
       };
     };
 
-    networking.hostName = "mnas"; # Define your hostname.
+    networking.hostName = "bnas"; # Define your hostname.
     #TODO networking.hostId = "8425e349"; # for zfs, helps stop importing to wrong machine
     networking.useDHCP = lib.mkDefault true;
 

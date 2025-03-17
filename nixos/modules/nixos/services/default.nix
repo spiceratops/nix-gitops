@@ -7,6 +7,7 @@
     ./restic
     # ./minio
     # ./powerdns
-    ./blocky
+    # ./blocky
+    ./adguardhome
   ];
 }
