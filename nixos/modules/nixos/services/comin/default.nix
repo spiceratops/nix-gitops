@@ -9,8 +9,10 @@ let
 in
 {
   options.mySystem.services.comin.enable = mkEnableOption "comin";
-  config.services.comin = mkIf cfg.enable {
 
+  config = mkIf cfg.enable {
+
+    services.comin = {
     enable = true;
     package = pkgs.comin;
     remotes = [{
@@ -19,5 +21,5 @@ in
       branches.main.name = "main";
   }];
   };
-
+  };
 }
