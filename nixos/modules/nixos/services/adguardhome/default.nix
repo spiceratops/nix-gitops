@@ -42,7 +42,7 @@ in
         schema_version = yaml_schema_version; # Just to be cautious, defualt is pkgs.adguardhome.schema_version.
 
         users = [{
-          name = "admin";
+          name = "stewart";
           password = "ADGUARDPASS"; # placeholder
         }];
 
