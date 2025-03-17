@@ -14,7 +14,6 @@ in
 
     services.comin = {
     enable = true;
-    package = pkgs.comin;
     remotes = [{
       name = "origin";
       url = "https://github.com/spiceratops/nix-gitops";
