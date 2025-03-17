@@ -14,8 +14,8 @@
   mySystem.services = {
 
     openssh.enable = true;
-    # adguardhome.enable = true;
-    comin.enable = true;
+    adguardhome.enable = true;
+    # comin.enable = true;
   };
 
     mySystem.system = {
