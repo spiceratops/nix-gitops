@@ -9,6 +9,6 @@
     # ./powerdns
     # ./blocky
     ./adguardhome
-    ./comin
+    # ./comin
   ];
 }
