@@ -7,7 +7,7 @@ with lib;
 let
   cfg = config.mySystem.services.adguardhome;
   app = "adguard-home";
-  yaml_schema_version = 24;
+  yaml_schema_version = 28;
   port = 53;
   port_webui = 3000;
   adguardUser = "adguardhome";

@@ -9,7 +9,7 @@ with lib;
     '';
 
     # Do not change unless you know what you are doing
-    stateVersion = "24.05"; # THERE BE DRAGONS
+    stateVersion = "24.11"; # THERE BE DRAGONS
 
     #      (This one comes in the niiiiight)           :::
     #                                              :: :::.
