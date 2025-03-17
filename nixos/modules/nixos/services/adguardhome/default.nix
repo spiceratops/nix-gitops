@@ -143,19 +143,19 @@ in
 
     };
 
-    mySystem.services.gatus.monitors = [
-      {
-        name = "${config.networking.hostName} external dns";
-        group = "dns";
-        url = "${config.networking.hostName}.${config.mySystem.internalDomain}:${builtins.toString port}";
-        dns = {
-          query-name = "cloudflare.com";
-          query-type = "A";
-        };
-        interval = "1m";
-        alerts = [{ type = "pushover"; }];
-        conditions = [ "[DNS_RCODE] == NOERROR" ];
-      }
+    # mySystem.services.gatus.monitors = [
+    #   {
+    #     name = "${config.networking.hostName} external dns";
+    #     group = "dns";
+    #     url = "${config.networking.hostName}.${config.mySystem.internalDomain}:${builtins.toString port}";
+    #     dns = {
+    #       query-name = "cloudflare.com";
+    #       query-type = "A";
+    #     };
+    #     interval = "1m";
+    #     alerts = [{ type = "pushover"; }];
+    #     conditions = [ "[DNS_RCODE] == NOERROR" ];
+    #   }
       {
         name = "${config.networking.hostName} internal dns";
         group = "dns";
