@@ -60,7 +60,6 @@
     , home-manager
     , nix-vscode-extensions
     , impermanence
-    , comin
     , ...
     } @ inputs:
 

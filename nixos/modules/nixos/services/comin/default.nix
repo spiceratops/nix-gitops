@@ -13,11 +13,11 @@ in
   config = mkIf cfg.enable {
 
     services.comin = {
-    enable = true;
-    remotes = [{
-      name = "origin";
-      url = "https://github.com/spiceratops/nix-gitops";
-      branches.main.name = "main";
+      enable = true;
+      remotes = [{
+        name = "origin";
+        url = "https://github.com/spiceratops/nix-gitops";
+        branches.main.name = "main";
   }];
   };
   };
