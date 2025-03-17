@@ -156,19 +156,19 @@ in
     #     alerts = [{ type = "pushover"; }];
     #     conditions = [ "[DNS_RCODE] == NOERROR" ];
     #   }
-      {
-        name = "${config.networking.hostName} internal dns";
-        group = "dns";
-        url = "${config.networking.hostName}.${config.mySystem.internalDomain}:${builtins.toString port}";
-        dns = {
-          query-name = "dns02.${config.mySystem.internalDomain}";
-          query-type = "A";
-        };
-        interval = "1m";
-        alerts = [{ type = "pushover"; }];
-        conditions = [ "[DNS_RCODE] == NOERROR" ];
-      }
-    ];
+    #   {
+    #     name = "${config.networking.hostName} internal dns";
+    #     group = "dns";
+    #     url = "${config.networking.hostName}.${config.mySystem.internalDomain}:${builtins.toString port}";
+    #     dns = {
+    #       query-name = "dns02.${config.mySystem.internalDomain}";
+    #       query-type = "A";
+    #     };
+    #     interval = "1m";
+    #     alerts = [{ type = "pushover"; }];
+    #     conditions = [ "[DNS_RCODE] == NOERROR" ];
+    #   }
+    # ];
 
 
   };
