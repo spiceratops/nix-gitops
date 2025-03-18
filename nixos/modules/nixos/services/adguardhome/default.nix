@@ -9,6 +9,7 @@ let
   app = "adguard-home";
   yaml_schema_version = 29;
   port = 53;
+  port_https = 443;
   port_webui = 3000;
   adguardUser = "adguardhome";
 in
@@ -138,8 +139,8 @@ in
 
     networking.firewall = mkIf cfg.openFirewall {
 
-      allowedTCPPorts = [ port port_webui ];
-      allowedUDPPorts = [ port port_webui ];
+      allowedTCPPorts = [ port port_webui port_https ];
+      allowedUDPPorts = [ port port_webui port_https ];
 
     };
 
