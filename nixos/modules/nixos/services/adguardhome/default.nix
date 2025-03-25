@@ -74,6 +74,7 @@ in
           # upstream DNS
           upstream_dns = [
             "192.168.1.1"
+            "[/cluster.local/]10.245.0.10"
           ];
 
           # resolving local addresses
