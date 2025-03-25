@@ -57,6 +57,7 @@
     networking.hostName = "dns02"; # Define your hostname.
     networking.hostId = "e3657900"; # for zfs, helps stop importing to wrong machine
     networking.useDHCP = lib.mkDefault true;
+    networking.enableIPv6 = true;
 
     fileSystems."/" =
       {

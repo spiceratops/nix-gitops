@@ -73,16 +73,11 @@ in
 
           # upstream DNS
           upstream_dns = [
-            "192.168.10.1"
-          ];
-
-          # fallback dns - cloudflare and mullvad
-          fallback_dns = [
-            "https://dns.cloudflare.com/dns-query"
+            "192.168.1.1"
           ];
 
           # resolving local addresses
-          local_ptr_upstreams = [ "192.168.10.1" ]; # Opnsense
+          local_ptr_upstreams = [ "192.168.1.1" ]; # Opnsense
           use_private_ptr_resolvers = true;
 
           # security
