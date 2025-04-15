@@ -102,19 +102,22 @@
     services.samba = {
       enable = true;
       openFirewall = true;
-      settings = ''
-        workgroup = WORKGROUP
-        server string = mnas
-        netbios name = mnas
-        security = user
-        #use sendfile = yes
-        #max protocol = smb2
-        # note: localhost is the ipv6 localhost ::1
-        hosts allow = 192.168.10. 192.168.20. 192.168.1. 127.0.0.1 localhost
-        hosts deny = 0.0.0.0/0
-        guest account = nobody
-        map to guest = bad user
-      '';
+      settings.global = {
+        workgroup = "WORKGROUP";
+        "server string" = "mnas";
+        "netbios name" = "mnas";
+        "security type" = "user";
+        "hosts allow" = "192.168.10. 192.168.20. 192.168.1. 100.64.0.0/10 127.0.0.1 localhost";
+        "hosts deny" = "0.0.0.0/0";
+        "guest account" = "nobody";
+        "map to guest" = "bad user";
+        "min protocol" = "SMB2";
+        "ea support" = "yes";
+        "browseable" = "yes";
+        "smb encrypt" = "auto";
+        "load printers" = "no";
+        "printcap name" = "/dev/null";
+        "bind interfaces only" = "yes";
       shares = {
         media = {
           path = "/tank/media";
