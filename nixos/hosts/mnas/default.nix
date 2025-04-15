@@ -118,6 +118,7 @@
         "load printers" = "no";
         "printcap name" = "/dev/null";
         "bind interfaces only" = "yes";
+      };
       shares = {
         media = {
           path = "/tank/media";
