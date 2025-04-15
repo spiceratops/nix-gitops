@@ -102,7 +102,7 @@
     services.samba = {
       enable = true;
       openFirewall = true;
-      extraConfig = ''
+      settings = ''
         workgroup = WORKGROUP
         server string = mnas
         netbios name = mnas
